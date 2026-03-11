@@ -31,4 +31,10 @@ def test_non_nums():
         fix_phone_num("(3213) 654 3333")
 
 
+def test_value_error_non_nums():
+    with pytest.raises(ValueError):
+        fix_phone_num("334dfdee45")
+        fix_phone_num("abcdefghij")
+
+
 test_fix_phone_num()
